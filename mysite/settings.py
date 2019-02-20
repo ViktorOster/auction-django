@@ -1,4 +1,3 @@
-import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -152,4 +151,3 @@ REST_FRAMEWORK = {
 SESSION_COOKIE_DOMAIN = None
 
 # Configure Django App for Heroku.
-django_heroku.settings(locals())
