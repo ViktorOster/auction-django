@@ -1,3 +1,4 @@
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -128,6 +129,7 @@ EMAIL_HOST_USER = 'Auctions@gmail.com'
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join('static'), )
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -148,3 +150,6 @@ REST_FRAMEWORK = {
 
 # Cookie Domain
 SESSION_COOKIE_DOMAIN = None
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
