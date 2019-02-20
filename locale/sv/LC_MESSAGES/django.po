@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-26 17:10+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blog\forms.py:75
+msgid "The two password fields didn't match."
+msgstr "De två lösenordsfälten matchar inte"
+
+#: .\blog\forms.py:78
+msgid "New email address"
+msgstr "Ny email-address"
+
+#: .\blog\forms.py:80
+msgid "New password"
+msgstr "Nytt lösenord"
+
+#: .\blog\forms.py:82
+msgid "New password confirmation"
+msgstr "Bekräfta lösenord"
+
+#: .\blog\forms.py:121
+msgid "Email address"
+msgstr "Email-address"
+
+#: .\blog\forms.py:122
+msgid "Required."
+msgstr "Krävs"
+
+#: .\blog\forms.py:144
+msgid "Deadline date (format: YYYY-MM-DD HH:MM)"
+msgstr "Deadline-datum (format: ÅÅÅÅ-MM-DD TT:MM)"
+
+#: .\blog\templates\blog\edit_user.html:5
+msgid "Modify User"
+msgstr "Editera Användare"
+
+#: .\blog\templates\blog\post_list.html:27
+msgid "Search:"
+msgstr "Sök:"
+
+#: .\blog\templates\blog\post_list.html:34
+msgid "Currency:"
+msgstr "Valuta"
+
+#: .\blog\templates\blog\post_list.html:50
+msgid "Language:"
+msgstr "Språk"
+
+#: .\blog\templates\blog\post_list.html:7
+msgid "Signed in as:"
+msgstr "Inloggad som:"
+
+#: .\blog\templates\blog\post_list.html:10
+msgid "Not Signed In"
+msgstr "Inte Inloggad"
+
+#: .\blog\templates\blog\post_list.html:15
+msgid "Log Out"
+msgstr "Logga Ut"
+
+#: .\blog\templates\blog\post_list.html:16
+msgid "Edit User"
+msgstr "Editera Användare"
+
+#: .\blog\templates\blog\post_list.html:18
+msgid "Sign Up"
+msgstr "Registrera Användare"
+
+#: .\blog\templates\blog\post_list.html:22
+msgid "New Listing"
+msgstr "Ny Auktion"

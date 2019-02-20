@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-30 20:27+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blog\forms.py:75
+msgid "The two password fields didn't match."
+msgstr "Salasanat eivät täsmää"
+
+#: .\blog\forms.py:78
+msgid "New email address"
+msgstr "Uusi sähköpostiosoite"
+
+#: .\blog\forms.py:80
+msgid "New password"
+msgstr "Uusi salasana"
+
+#: .\blog\forms.py:82
+msgid "New password confirmation"
+msgstr "Vahvista salasana"
+
+#: .\blog\forms.py:121
+msgid "Email address"
+msgstr "Sähköpostiosoite"
+
+#: .\blog\forms.py:122
+msgid "Required."
+msgstr "Pakollinen kenttä"
+
+#: .\blog\forms.py:144
+msgid "Deadline date (format: YYYY-MM-DD HH:MM)"
+msgstr "Deadline-aika (format: VVVV-KK-PP TT:MM)"
+
+#: .\blog\templates\blog\edit_user.html:5
+msgid "Modify User"
+msgstr "Muokkaa käyttäjä"
+
+#: .\blog\templates\blog\post_list.html:7
+msgid "Signed in as:"
+msgstr "Kirjautunut käyttäjänä:"
+
+#: .\blog\templates\blog\post_list.html:10
+msgid "Not Signed In"
+msgstr "Ei kirjautunut sisään"
+
+#: .\blog\templates\blog\post_list.html:15
+msgid "Log Out"
+msgstr "Kirjaudu ulos"
+
+#: .\blog\templates\blog\post_list.html:16
+msgid "Edit User"
+msgstr "Muokkaa käyttäjää"
+
+#: .\blog\templates\blog\post_list.html:18
+msgid "Sign Up"
+msgstr "Luo uusi käyttäjä"
+
+#: .\blog\templates\blog\post_list.html:19
+msgid "Log In"
+msgstr "Kirjaudu sisään"
+
+#: .\blog\templates\blog\post_list.html:22
+msgid "New Listing"
+msgstr "Uusi ilmoitus"
+
+#: .\blog\templates\blog\post_list.html:27
+msgid "Search:"
+msgstr "Hae:"
+
+#: .\blog\templates\blog\post_list.html:34
+msgid "Currency:"
+msgstr "Valuutta:"
+
+#: .\blog\templates\blog\post_list.html:50
+msgid "Language:"
+msgstr "Kieli:"

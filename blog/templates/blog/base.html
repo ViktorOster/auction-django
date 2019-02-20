@@ -1,0 +1,64 @@
+{% load static %}
+{% load i18n %}
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Auction Site</title>
+  </head>
+  <body>
+    <div id="navbar-container">
+      <div id="navbar">
+        <!--<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>-->
+        <div id="nav-logo"> 
+          <i id="logo-icon" class="fas fa-gavel fa-lg"></i>
+          <div id="logo-text-container"> 
+            <h2 id="logo-text"><a href="/">GAVEL</a></h2>
+          </div>
+        </div>
+        
+
+        {% if user.is_authenticated %}
+          <span class="nav1 nav-item">
+            {% comment %} {% trans "Signed in as:" %}  {% endcomment %}
+            {{ user.email }}
+          </span>
+        {% else %}
+          <span class="nav1 nav-item">
+            {% trans "Not Signed In" %}  <a></a>
+          </span>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+          <span class="nav2 nav-item">
+            <a href="{% url 'post_new' %}">{% trans "New Listing" %}</a> 
+          </span>
+          <span class="nav3 nav-item">
+            <a href="{% url 'edit_user' %}">{% trans "Edit User" %}</a>
+          </span>
+          <span class="nav4 nav-item">
+            <a href="{% url 'logout' %}">{% trans "Log Out" %}</a>
+          </span>
+          
+        {% else %}
+          <span class="nav3 nav-item">
+            <a href="{% url 'signup' %}">{% trans "Sign Up" %}</a>
+          </span>
+          <span class="nav4 nav-item">
+            <a href="{% url 'login' %}">{% trans "Log In" %}</a>
+          </span>
+        {% endif %}  
+
+      </div>
+    </div>
+    
+
+    <div class="content">
+      {% block content %} {% endblock %}
+    </div>
+
+  </body>
+</html>

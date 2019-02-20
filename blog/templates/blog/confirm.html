@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Add post?</h1>
+    <form action="/save_post/" method="post">
+        {% csrf_token %}
+         {{ form.as_p }}
+        
+         <INPUT TYPE=HIDDEN NAME="p_title" VALUE={{p_title}}>
+		 <INPUT TYPE=HIDDEN NAME="p_text" VALUE={{p_text}}>
+       <INPUT TYPE=HIDDEN NAME="p_price" VALUE={{p_price}}>
+         <INPUT TYPE=HIDDEN NAME="p_deadline_date" VALUE="{{p_deadline_date}}">
+           <input type="submit" name="option" value="Yes">
+           <input type="submit" name="option" value="No">
+    </form>
+{% endblock %}

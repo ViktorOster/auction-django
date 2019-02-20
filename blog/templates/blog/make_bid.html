@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Make bid on item: {{ post }} </h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        <p> Item description: {{ post.text }} </p>
+        Current price: {{ post.price }}
+        {{ form.as_p }}
+        <INPUT TYPE=HIDDEN NAME="auction_version" VALUE={{post.version}}>
+        <button type="submit" class="save btn btn-default" id="confirm">Save</button>
+
+    </form>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}

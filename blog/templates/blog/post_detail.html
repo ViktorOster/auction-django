@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <a href="{% url 'post_edit' pk=post.pk %}">Edit Post</a>
+        <h1>{{ post.title }}</h1>
+        <p>Seller: {{ post.author }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>Price: {{ post.price }}</p>
+        <p>Deadline: {{ post.deadline_date }}</p>
+        <p>
+            <a href="{% url 'make_bid' pk=post.pk %}">Make Bid</a>
+        </p>
+        {% if user.is_superuser %}
+            <form method="post">
+                {% csrf_token %}
+
+                <input type="submit" name="ban_auction" value="Ban Auction">
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

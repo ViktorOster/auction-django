@@ -1,0 +1,111 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <form method="post">
+      <div id="dropdowns">
+        <div id="dropdown1">
+          {% csrf_token %}
+            {% comment %} {% for str in currencies %}
+                <button class= "button-link{% if selected_currency == str %} underline{% endif %}" name = "currency" value = {{ str }} onclick="submit();"> 
+                
+                    {% if str == "EUR" %}
+                         €
+                    {% elif str == "GBP" %}
+                         £
+                    {% elif str == "USD" %}
+                         $
+                    {% elif str == "SEK" %}
+                        SEK
+                    {% endif %}
+                
+                </button>
+            {% endfor %} {% endcomment %}
+
+          {% comment %} {% trans "Currency:" %} {% endcomment %}
+          <select id="select-currency" name = "currency" onchange="submit();">
+              {% for str in currencies %}
+                  {% if selected_currency == str or selected_currency == "" %}
+                      <option value = {{ str }} selected>{{ str }}</option>
+                  {% else %}
+                      <option value = {{ str }}>{{ str }}</option>
+                  {% endif %}
+              {% endfor %}
+
+          </select>
+
+
+        </div>
+
+        <div id="dropdown2">
+            {% csrf_token %}
+
+            {% comment %} {% trans "Language:" %} {% endcomment %}
+            <select name = "selected_language" onchange="submit();">
+                {% for str in languages %}
+                    {% if selected_language == str %}
+                        <option value = {{ str }} selected>{{ str|upper }}</option>
+                    {% else %}
+                        <option value = {{ str }}>{{ str|upper }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select> 
+                {% comment %} {% for str in languages %}
+                    <button class= "button-link{% if selected_language == str %} underline{% endif %}" name = "selected_language" value = {{ str }} onclick="submit();"> {{ str|upper }}</button>
+                {% endfor %} {% endcomment %}
+            </select>
+
+        </div>
+      </div>
+    </form>
+
+    <div id ="hero-section">
+      <h1>Bid & sell, </h1>
+      <h3>effortlessly. </h3>
+    </div>
+
+    <form method="post">
+      <div id="actions">
+        <div id="searchbar">
+            {% csrf_token %}
+            <input type="text" name="search_text" placeholder = "{% trans "Search" %}" >
+            <input type="submit" value="Go!" class="button">
+        </div>
+        
+      </div>  
+    </form>
+
+    <h3 id="for-sale">For Sale:</h3>
+
+    <div id="posts">
+        {% for post in posts %}
+            {% if post.is_banned is False or user.is_superuser %}
+
+                <div class="post">
+
+                    <h3 class="post-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                    <p class ="post-text"> {{ post.text|linebreaksbr }}</p>
+                    <p class="post-price"> 
+                    
+                    {{ post.price }}
+                    {% if selected_currency == "EUR" %}
+                        €
+                    {% elif selected_currency == "GBP" %}
+                        £
+                    {% elif selected_currency == "USD" %}
+                        $
+                    {% elif selected_currency == "SEK" %}
+                        SEK
+                    {% endif %}
+                    
+                    </p>
+                    <p class="post-published">Published On: {{ post.published_date }}</p>
+                    <p class="post-deadline">Listing Deadline: {{ post.deadline_date }}</p>
+
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+{% endblock %}
