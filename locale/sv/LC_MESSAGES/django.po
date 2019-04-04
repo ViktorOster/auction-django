@@ -18,6 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\blog\templates\blog\login.html:7
+msgid "Login"
+msgstr "Logga In"
+
 #: .\blog\forms.py:75
 msgid "The two password fields didn't match."
 msgstr "De två lösenordsfälten matchar inte"
@@ -62,15 +66,31 @@ msgstr "Valuta"
 msgid "Language:"
 msgstr "Språk"
 
+#: .\blog\templates\blog\post_list.html:78
+msgid "For Sale:"
+msgstr "Till Salu:"
+
+#: .\blog\templates\blog\post_list.html:63
+msgid "Bid & sell,"
+msgstr "Köp och sälj,"
+
+#: .\blog\templates\blog\post_list.html:64
+msgid "effortlessly."
+msgstr "enkelt."
+
 #: .\blog\templates\blog\post_list.html:7
 msgid "Signed in as:"
 msgstr "Inloggad som:"
 
-#: .\blog\templates\blog\post_list.html:10
+#: .\blog\templates\blog\base.html:30
 msgid "Not Signed In"
 msgstr "Inte Inloggad"
 
-#: .\blog\templates\blog\post_list.html:15
+#: .\blog\templates\blog\base.html:50
+msgid "Log In"
+msgstr "Logga In"
+
+#: .\blog\templates\blog\base.html:42
 msgid "Log Out"
 msgstr "Logga Ut"
 

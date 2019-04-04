@@ -18,6 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\blog\templates\blog\login.html:7
+msgid "Login"
+msgstr "Kirjaudu Sisään"
+
+#: .\blog\templates\blog\post_list.html:78
+msgid "For Sale:"
+msgstr "Myytävänä:"
+
+#: .\blog\templates\blog\post_list.html:63
+msgid "Bid & sell,"
+msgstr "Osta ja myy,"
+
+#: .\blog\templates\blog\post_list.html:64
+msgid "effortlessly."
+msgstr "helposti."
+
 #: .\blog\forms.py:75
 msgid "The two password fields didn't match."
 msgstr "Salasanat eivät täsmää"
