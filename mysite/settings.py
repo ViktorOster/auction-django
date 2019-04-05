@@ -14,7 +14,7 @@ SECRET_KEY = 'viri(270ax-+4n-$8^%ur%i3ilc2(*%r!=90)t*$9)s4--a11z'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost',
-                 'viktoroster.pythonanywhere.com', 'osterholmv.pythonanywhere.com']
+                 'viktoroster.pythonanywhere.com', 'osterholmv.pythonanywhere.com', ".pythonanywhere.com"]
 
 
 # Application definition
@@ -33,14 +33,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'django.middleware.locale.LocaleMiddleware'
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -128,9 +128,11 @@ EMAIL_HOST_USER = 'Auctions@gmail.com'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 # STATIC_ROOT = ''
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join('static'), )
+# STATICFILES_DIRS = (os.path.join('static'), )
+# STATICFILES_DIRS = (os.path.join('static'))
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
