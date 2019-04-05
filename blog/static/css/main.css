@@ -9,6 +9,7 @@ html {
   height: 100vh;
   background: #608ADA;
   font-family: 'Open Sans', sans-serif;
+  /* font-family: sans-serif; */
   overflow-x:hidden;
 }
 h1 {

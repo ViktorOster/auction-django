@@ -131,10 +131,11 @@ EMAIL_HOST_USER = 'Auctions@gmail.com'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join('static/rest_framework/docs/img'), )
 # STATICFILES_DIRS = (os.path.join('static'), )
-# STATICFILES_DIRS = (os.path.join('static'))
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_DIRS = (BASE_DIR.child('static'),)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
