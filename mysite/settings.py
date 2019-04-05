@@ -136,7 +136,7 @@ STATIC_URL = '/static/'
 # STATICFILES_DIRS = (os.path.join('static'), )
 # STATICFILES_DIRS = (BASE_DIR.child('static'),)
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
